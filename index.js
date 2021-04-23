@@ -16,7 +16,7 @@ app.post("/form-submit", (req, res) => {
 
   const data = {
     from: `${firstName} ${lastName} <${email}>`,
-    to: "llennairek@gmail.com",
+    to: process.env.MAIL,
     subject: subject,
     text: message,
   };
